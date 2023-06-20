@@ -4,10 +4,10 @@ const views = require("koa-views");
 const json = require("koa-json");
 const onerror = require("koa-onerror");
 const bodyparser = require("koa-bodyparser");
-const index = require("./routes/index");
 const users = require("./routes/users");
 const log4js = require("./utils/log");
-
+const router = require("koa-router")();
+require("./config/db");
 // error handler
 onerror(app);
 
@@ -28,12 +28,12 @@ app.use(
 
 app.use(async (ctx, next) => {
   await next();
-  log4js.info("log output");
 });
 
 // routes
-app.use(index.routes(), index.allowedMethods());
-app.use(users.routes(), users.allowedMethods());
+router.prefix("/api");
+router.use(users.routes(), users.allowedMethods());
+app.use(router.routes(), users.allowedMethods());
 
 // error-handling
 app.on("error", (err, ctx) => {

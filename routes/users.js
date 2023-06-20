@@ -1,13 +1,20 @@
-const router = require('koa-router')()
+const router = require("koa-router")();
+const User = require("../models/userSchema");
+const util = require("../utils/utils");
+router.prefix("/users");
 
-router.prefix('/users')
+router.post("/login", async (ctx) => {
+  try {
+    const { username, password } = ctx.request.body;
+    const res = await User.findOne({ username, password });
+    if (res) {
+      ctx.body = util.success(res);
+    } else {
+      ctx.body = util.fail("账号或密码错误");
+    }
+  } catch (error) {
+    ctx.body = util.fail(error.msg);
+  }
+});
 
-router.get('/', function (ctx, next) {
-  ctx.body = 'this is a users response!'
-})
-
-router.get('/bar', function (ctx, next) {
-  ctx.body = 'this is a users/bar response'
-})
-
-module.exports = router
+module.exports = router;

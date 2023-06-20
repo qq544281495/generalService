@@ -1,4 +1,4 @@
-const log4js = require("./log4js");
+const log4js = require("./log");
 // 响应状态码
 const CODE = {
   SUCCESS: 200,
@@ -28,8 +28,7 @@ module.exports = {
       message,
     };
   },
-  fail(code = CODE.BUSINESS_ERROR, message = "") {
-    log4js.error(message);
+  fail(message = "", code = CODE.BUSINESS_ERROR) {
     return {
       code,
       message,

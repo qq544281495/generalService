@@ -33,9 +33,9 @@ log4js.configure({
   },
   categories: {
     default: { appenders: ["console"], level: "debug" },
-    warn: { appenders: ["warn"], level: "warn" },
-    error: { appenders: ["error"], level: "error" },
-    fatal: { appenders: ["fatal"], level: "fatal" },
+    warn: { appenders: ["warn", "console"], level: "warn" },
+    error: { appenders: ["error", "console"], level: "error" },
+    fatal: { appenders: ["fatal", "console"], level: "fatal" },
   },
 });
 
