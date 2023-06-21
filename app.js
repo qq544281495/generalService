@@ -7,6 +7,9 @@ const bodyparser = require("koa-bodyparser");
 const users = require("./routes/users");
 const log4js = require("./utils/log");
 const router = require("koa-router")();
+const jwt = require("jsonwebtoken");
+const koajwt = require("koa-jwt");
+const util = require("./utils/utils");
 require("./config/db");
 // error handler
 onerror(app);
@@ -27,11 +30,27 @@ app.use(
 );
 
 app.use(async (ctx, next) => {
-  await next();
+  await next().catch((err) => {
+    if (err.status == "401") {
+      ctx.body = util.fail("Token认证失败", util.CODE.AUTH_ERROR);
+    } else {
+      throw err;
+    }
+  });
 });
-
+// token身份验证
+app.use(
+  koajwt({ secret: "GeneralManage" }).unless({
+    path: [/^\/api\/users\/login/],
+  })
+);
 // routes
 router.prefix("/api");
+
+// router.get("/leave/count", (ctx) => {
+//   ctx.body = "body";
+// });
+
 router.use(users.routes(), users.allowedMethods());
 app.use(router.routes(), users.allowedMethods());
 

@@ -34,4 +34,5 @@ module.exports = {
       message,
     };
   },
+  CODE,
 };
