@@ -4,12 +4,15 @@ const views = require("koa-views");
 const json = require("koa-json");
 const onerror = require("koa-onerror");
 const bodyparser = require("koa-bodyparser");
-const users = require("./routes/users");
 const log4js = require("./utils/log");
 const router = require("koa-router")();
-const jwt = require("jsonwebtoken");
 const koajwt = require("koa-jwt");
 const util = require("./utils/utils");
+// 路由
+const users = require("./routes/users");
+const menus = require("./routes/menus");
+const roles = require("./routes/roles");
+const depts = require("./routes/depts");
 require("./config/db");
 // error handler
 onerror(app);
@@ -32,7 +35,7 @@ app.use(
 app.use(async (ctx, next) => {
   await next().catch((err) => {
     if (err.status == "401") {
-      ctx.body = util.fail("Token认证失败", util.CODE.AUTH_ERROR);
+      ctx.body = util.fail("身份验证失败，请重新登录", util.CODE.AUTH_ERROR);
     } else {
       throw err;
     }
@@ -47,11 +50,10 @@ app.use(
 // routes
 router.prefix("/api");
 
-// router.get("/leave/count", (ctx) => {
-//   ctx.body = "body";
-// });
-
 router.use(users.routes(), users.allowedMethods());
+router.use(menus.routes(), menus.allowedMethods());
+router.use(roles.routes(), roles.allowedMethods());
+router.use(depts.routes(), depts.allowedMethods());
 app.use(router.routes(), users.allowedMethods());
 
 // error-handling
