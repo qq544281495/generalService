@@ -6,12 +6,13 @@ const jwt = require("jsonwebtoken");
 const md5 = require("md5");
 router.prefix("/users");
 
-// 登录接口
+// 登录
 router.post("/login", async (ctx) => {
   try {
     const { userName, password } = ctx.request.body;
+    let md5Password = md5(password);
     const res = await User.findOne(
-      { userName, password },
+      { userName, password: md5Password },
       { _id: 0, password: 0 }
     );
     if (res) {
@@ -22,7 +23,7 @@ router.post("/login", async (ctx) => {
           data,
         },
         "GeneralManage",
-        { expiresIn: "1h" }
+        { expiresIn: "1d" }
       );
       data.token = token;
       ctx.body = util.success(data);
@@ -30,7 +31,7 @@ router.post("/login", async (ctx) => {
       ctx.body = util.fail("账号或密码错误");
     }
   } catch (error) {
-    ctx.body = util.fail(error.msg);
+    ctx.body = util.fail(`登录失败：${error.stack}`);
   }
 });
 
@@ -64,12 +65,19 @@ router.get("/list", async (ctx) => {
 
 // 删除用户
 router.post("/delete", async (ctx) => {
-  const { userIds } = ctx.request.body;
-  const res = await User.updateMany({ userId: { $in: userIds } }, { state: 2 });
-  if (res.matchedCount) {
-    ctx.body = util.success({ nModified: res.matchedCount }, `用户删除成功`);
-  } else {
-    ctx.body = util.fail(res, "用户删除失败");
+  try {
+    const { userIds } = ctx.request.body;
+    const res = await User.updateMany(
+      { userId: { $in: userIds } },
+      { state: 2 }
+    );
+    if (res.matchedCount) {
+      ctx.body = util.success({ nModified: res.matchedCount }, `用户删除成功`);
+    } else {
+      ctx.body = util.fail(res, "用户删除失败");
+    }
+  } catch (error) {
+    ctx.body = util.fail(error.stack, "用户删除失败");
   }
 });
 
@@ -99,6 +107,7 @@ router.post("/operate", async (ctx) => {
           { _id: "userId" },
           { $inc: { sequence_value: 1 } }
         );
+        // 需要修改保存字段new Schema
         const user = new User({
           userId: counter.sequence_value,
           userName,
