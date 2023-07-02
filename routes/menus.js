@@ -47,7 +47,7 @@ router.post("/operate", async (ctx) => {
       params.updateTime = new Date();
       await Menu.findByIdAndUpdate(_id, params);
       info = "菜单更新成功";
-    } else {
+    } else if (action == "delete") {
       await Menu.findByIdAndRemove(_id);
       await Menu.deleteMany({ parentId: { $all: [_id] } });
       info = "菜单删除成功";
