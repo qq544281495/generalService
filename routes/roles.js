@@ -3,6 +3,12 @@ const Role = require("../models/RoleSchema");
 const util = require("../utils/utils");
 router.prefix("/roles");
 
+// 获取所有角色列表
+router.get("/allList", async (ctx) => {
+  let list = await Role.find({});
+  ctx.body = util.success({ list });
+});
+
 // 角色列表
 router.get("/list", async (ctx) => {
   try {
