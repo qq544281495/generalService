@@ -15,7 +15,7 @@ router.get("/list", async (ctx) => {
     const { roleName } = ctx.request.query;
     const page = util.pageParam(ctx.request.query);
     let params = {};
-    if (roleName) params.roleName = roleName;
+    if (roleName) params.roleName = new RegExp(roleName, "i");
     const query = Role.find(params);
     const list = await query.skip(page.skipIndex).limit(page.pageSize);
     const total = await Role.countDocuments(params);
@@ -62,7 +62,7 @@ router.post("/operate", async (ctx) => {
 router.post("/update/permission", async (ctx) => {
   try {
     let { _id, permissionList } = ctx.request.body;
-    let res = await Role.findByIdAndUpdate(_id, { permissionList });
+    await Role.findByIdAndUpdate(_id, { permissionList });
     ctx.body = util.success({ info: "更新角色权限成功" });
   } catch (error) {
     ctx.body = util.fail(`更新角色权限失败：${error.stack}`);

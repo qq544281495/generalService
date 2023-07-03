@@ -26,7 +26,7 @@ router.post("/login", async (ctx) => {
         { expiresIn: "1d" }
       );
       data.token = token;
-      ctx.body = util.success(data);
+      ctx.body = util.success({ data });
     } else {
       ctx.body = util.fail("账号或密码错误");
     }
@@ -42,7 +42,7 @@ router.get("/list", async (ctx) => {
     const page = util.pageParam(ctx.request.query);
     let params = {};
     if (userId) params.userId = userId;
-    if (userName) params.userName = userName;
+    if (userName) params.userName = new RegExp(userName, "i");
     if (state && state != "0") params.state = state;
     // 根据条件查询用户列表
     const query = User.find(params, { _id: 0, password: 0 });
@@ -120,7 +120,7 @@ router.post("/operate", async (ctx) => {
           deptId,
         });
         user.save();
-        ctx.body = util.success({ info: "success" }, "用户创建成功");
+        ctx.body = util.success({ info: "用户创建成功" }, "用户创建成功");
       }
     } catch (error) {
       ctx.body = util.fail(error.stack, "用户添加失败");
@@ -132,7 +132,7 @@ router.post("/operate", async (ctx) => {
         { userId },
         { mobile, job, state, roleList, deptId }
       );
-      ctx.body = util.success({ info: "success" }, "用户更新成功");
+      ctx.body = util.success({ info: "用户更新成功" }, "用户更新成功");
     } catch (error) {
       ctx.body = util.fail(error.stack, "用户更新失败");
     }

@@ -7,15 +7,20 @@ router.prefix("/menu");
 router.get("/list", async (ctx) => {
   const { menuName, menuState } = ctx.request.query;
   const params = {};
-  if (menuName) params.menuName = menuName;
+  if (menuName) params.menuName = new RegExp(menuName, "i");
   if (menuState) params.menuState = menuState;
-  let rootList = (await Menu.find(params)) || [];
-  const list = getTreeMenu(rootList, null, []);
-  ctx.body = util.success(list);
+  if (menuName || menuState) {
+    let list = await Menu.find(params);
+    ctx.body = util.success({ list });
+  } else {
+    let list = await Menu.find(params);
+    let tree = getTree(list, null, []);
+    ctx.body = util.success({ list: tree });
+  }
 });
 
 // 递归拼接树型结构
-function getTreeMenu(rootList, id, list) {
+function getTree(rootList, id, list) {
   for (let i = 0; i < rootList.length; i++) {
     let item = rootList[i];
     if (String(item.parentId.slice().pop()) == String(id)) {
@@ -24,7 +29,7 @@ function getTreeMenu(rootList, id, list) {
   }
   list.map((item) => {
     item.children = [];
-    getTreeMenu(rootList, item._id, item.children);
+    getTree(rootList, item._id, item.children);
     if (item.children.length == 0) {
       delete item.children;
     } else if (item.children[0].menuType == 2) {
@@ -54,7 +59,7 @@ router.post("/operate", async (ctx) => {
     }
     ctx.body = util.success({ info }, info);
   } catch (error) {
-    ctx.body = util.fail(`编辑菜单失败：${error.stack}`);
+    ctx.body = util.fail(`操作菜单失败：${error.stack}`);
   }
 });
 

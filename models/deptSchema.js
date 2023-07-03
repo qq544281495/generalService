@@ -1,15 +1,18 @@
 const mongoose = require("mongoose");
 const deptSchema = mongoose.Schema({
-  parentId: Array,
-  updateTime: String,
-  createTime: String,
-  _id: String,
+  parentId: [mongoose.Types.ObjectId],
   deptName: String,
   userId: String,
   userName: String,
   userEmail: String,
-  __v: Number,
-  children: Array,
+  updateTime: {
+    type: Date,
+    default: Date.now(),
+  },
+  createTime: {
+    type: Date,
+    default: Date.now(),
+  },
 });
 
 // 参数：模型名 模型 数据库表名
