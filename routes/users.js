@@ -1,5 +1,7 @@
 const router = require("koa-router")();
 const User = require("../models/userSchema");
+const Menu = require("../models/menuSchema");
+const Role = require("../models/roleSchema");
 const Counter = require("../models/counterSchema");
 const util = require("../utils/utils");
 const jwt = require("jsonwebtoken");
@@ -138,5 +140,55 @@ router.post("/operate", async (ctx) => {
     }
   }
 });
+
+// 获取用户对应权限菜单
+router.get("/getPermissionList", async (ctx) => {
+  let authorization = ctx.request.headers.authorization;
+  let { data } = util.decoded(authorization);
+  let list = await getMenuList(data.role, data.roleList);
+  let button = getButtonList(JSON.parse(JSON.stringify(list)));
+  ctx.body = util.success({ list, button });
+});
+
+async function getMenuList(userRole, roleKeys) {
+  let rootList = [];
+  if (userRole == 0) {
+    // 管理员
+    rootList = (await Menu.find({})) || [];
+  } else {
+    let roleList = await Role.find({ _id: { $in: roleKeys } });
+    let permissionList = [];
+    roleList.map((role) => {
+      let { checkedKeys, halfCheckedKeys } = role.permissionList;
+      permissionList = permissionList.concat([
+        ...checkedKeys,
+        ...halfCheckedKeys,
+      ]);
+    });
+    // 去重
+    permissionList = [...new Set(permissionList)];
+    rootList = await Menu.find({ _id: { $in: permissionList } });
+  }
+  return util.getMenuTree(rootList, null, []);
+}
+
+function getButtonList(list) {
+  const buttonList = [];
+  const deep = (array) => {
+    while (array.length) {
+      let item = array.pop();
+      if (item.action) {
+        item.action.map((item) => {
+          buttonList.push(item.menuCode);
+        });
+      }
+      if (item.children && !item.action) {
+        deep(item.children);
+      }
+    }
+  };
+  deep(list);
+  return buttonList;
+}
 
 module.exports = router;

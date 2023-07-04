@@ -14,31 +14,10 @@ router.get("/list", async (ctx) => {
     ctx.body = util.success({ list });
   } else {
     let list = await Menu.find(params);
-    let tree = getTree(list, null, []);
+    let tree = util.getMenuTree(list, null, []);
     ctx.body = util.success({ list: tree });
   }
 });
-
-// 递归拼接树型结构
-function getTree(rootList, id, list) {
-  for (let i = 0; i < rootList.length; i++) {
-    let item = rootList[i];
-    if (String(item.parentId.slice().pop()) == String(id)) {
-      list.push(item._doc);
-    }
-  }
-  list.map((item) => {
-    item.children = [];
-    getTree(rootList, item._id, item.children);
-    if (item.children.length == 0) {
-      delete item.children;
-    } else if (item.children[0].menuType == 2) {
-      // 快速区分菜单和按钮，用于菜单按钮权限控制
-      item.action = item.children;
-    }
-  });
-  return list;
-}
 
 // 创建 | 编辑 | 删除菜单
 router.post("/operate", async (ctx) => {

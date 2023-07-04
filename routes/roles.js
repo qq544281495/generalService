@@ -1,5 +1,5 @@
 const router = require("koa-router")();
-const Role = require("../models/RoleSchema");
+const Role = require("../models/roleSchema");
 const util = require("../utils/utils");
 router.prefix("/roles");
 

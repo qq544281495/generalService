@@ -1,4 +1,5 @@
 const log4js = require("./log");
+const jwt = require("jsonwebtoken");
 // 响应状态码
 const CODE = {
   SUCCESS: 200,
@@ -33,6 +34,50 @@ module.exports = {
       code,
       message,
     };
+  },
+  decoded(authorization) {
+    if (authorization) {
+      let token = authorization.split(" ")[1];
+      return jwt.verify(token, "GeneralManage");
+    }
+  },
+  // 递归拼接菜单树型结构
+  getMenuTree(rootList, id, list) {
+    for (let i = 0; i < rootList.length; i++) {
+      let item = rootList[i];
+      if (String(item.parentId.slice().pop()) == String(id)) {
+        list.push(item._doc);
+      }
+    }
+    list.map((item) => {
+      item.children = [];
+      this.getMenuTree(rootList, item._id, item.children);
+      if (item.children.length == 0) {
+        delete item.children;
+      } else if (item.children[0].menuType == 2) {
+        // 快速区分菜单和按钮，用于菜单按钮权限控制
+        item.action = item.children;
+      }
+    });
+    return list;
+  },
+
+  // 递归拼接部门树型结构
+  getDeptTree(rootList, id, list) {
+    for (let i = 0; i < rootList.length; i++) {
+      let item = rootList[i];
+      if (String(item.parentId.slice().pop()) == String(id)) {
+        list.push(item._doc);
+      }
+    }
+    list.map((item) => {
+      item.children = [];
+      this.getDeptTree(rootList, item._id, item.children);
+      if (item.children.length == 0) {
+        delete item.children;
+      }
+    });
+    return list;
   },
   CODE,
 };

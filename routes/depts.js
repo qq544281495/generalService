@@ -14,31 +14,13 @@ router.get("/list", async (ctx) => {
       ctx.body = util.success({ list });
     } else {
       let list = await Dept.find(params);
-      let tree = getTree(list, null, []);
+      let tree = util.getDeptTree(list, null, []);
       ctx.body = util.success({ list: tree });
     }
   } catch (error) {
     ctx.body = util.fail(`获取部门列表失败：${error.stack}`);
   }
 });
-
-// 递归拼接树型结构
-function getTree(rootList, id, list) {
-  for (let i = 0; i < rootList.length; i++) {
-    let item = rootList[i];
-    if (String(item.parentId.slice().pop()) == String(id)) {
-      list.push(item._doc);
-    }
-  }
-  list.map((item) => {
-    item.children = [];
-    getTree(rootList, item._id, item.children);
-    if (item.children.length == 0) {
-      delete item.children;
-    }
-  });
-  return list;
-}
 
 // 创建 | 编辑 | 删除部门
 router.post("/operate", async (ctx) => {
