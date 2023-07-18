@@ -167,4 +167,21 @@ router.post("/ratify/leave", async (ctx) => {
   }
 });
 
+router.get("/count", async (ctx) => {
+  try {
+    let authorization = ctx.request.headers.authorization;
+    let { data } = util.decoded(authorization);
+    const total = await Leave.countDocuments({
+      auditFlows: { $elemMatch: { userId: data.userId, checkState: 0 } },
+    })
+      .where("applyState")
+      .ne(5)
+      .where("curAuditUserName")
+      .eq(data.userName);
+    ctx.body = util.success({ total });
+  } catch (error) {
+    ctx.body = util.fail(`获取审批通知失败：${error.stack}`);
+  }
+});
+
 module.exports = router;
