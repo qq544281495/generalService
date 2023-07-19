@@ -1,0 +1,188 @@
+[{
+  "_id": {
+    "$oid": "64b7599e3488412631fc8228"
+  },
+  "userId": 1000000,
+  "userName": "Olivia",
+  "userEmail": "olivia@163.com",
+  "password": "21232f297a57a5a743894a0e4a801fc3",
+  "mobile": "18888888888",
+  "job": "Boss",
+  "state": 1,
+  "role": 0,
+  "roleList": [
+    "64b75451cab48a4ed97a04f7"
+  ],
+  "deptId": [
+    "64b757eb3488412631fc81ce"
+  ],
+  "createTime": {
+    "$date": "2023-07-19T03:18:46.484Z"
+  },
+  "lastLoginTime": {
+    "$date": "2023-07-19T03:18:46.484Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b75ba2d2519dbe7b57af5c"
+  },
+  "userId": 1000001,
+  "userName": "Liam",
+  "userEmail": "liam@163.com",
+  "password": "21232f297a57a5a743894a0e4a801fc3",
+  "mobile": "19999999999",
+  "job": "研发主管",
+  "state": 1,
+  "role": 1,
+  "roleList": [
+    "64b75b06d2519dbe7b57af1f"
+  ],
+  "deptId": [
+    "64b757eb3488412631fc81ce",
+    "64b7581d3488412631fc8208"
+  ],
+  "createTime": {
+    "$date": "2023-07-19T03:39:06.386Z"
+  },
+  "lastLoginTime": {
+    "$date": "2023-07-19T03:39:06.386Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b75bc3d2519dbe7b57af62"
+  },
+  "userId": 1000002,
+  "userName": "Noah",
+  "userEmail": "noah@163.com",
+  "password": "21232f297a57a5a743894a0e4a801fc3",
+  "mobile": "17777777777",
+  "job": "电商主管",
+  "state": 1,
+  "role": 1,
+  "roleList": [
+    "64b75b13d2519dbe7b57af2a"
+  ],
+  "deptId": [
+    "64b757eb3488412631fc81ce",
+    "64b758323488412631fc820c"
+  ],
+  "createTime": {
+    "$date": "2023-07-19T03:39:06.386Z"
+  },
+  "lastLoginTime": {
+    "$date": "2023-07-19T03:39:06.386Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b75bfed2519dbe7b57af68"
+  },
+  "userId": 1000003,
+  "userName": "James",
+  "userEmail": "james@163.com",
+  "password": "21232f297a57a5a743894a0e4a801fc3",
+  "mobile": "17788888888",
+  "job": "人事主管",
+  "state": 1,
+  "role": 1,
+  "roleList": [
+    "64b75b1ad2519dbe7b57af2e"
+  ],
+  "deptId": [
+    "64b757eb3488412631fc81ce",
+    "64b758413488412631fc8210"
+  ],
+  "createTime": {
+    "$date": "2023-07-19T03:39:06.386Z"
+  },
+  "lastLoginTime": {
+    "$date": "2023-07-19T03:39:06.386Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b75c22d2519dbe7b57af6e"
+  },
+  "userId": 1000004,
+  "userName": "Mason",
+  "userEmail": "mason@163.com",
+  "password": "21232f297a57a5a743894a0e4a801fc3",
+  "mobile": "17788889999",
+  "job": "行政主管",
+  "state": 1,
+  "role": 1,
+  "roleList": [
+    "64b75b22d2519dbe7b57af32"
+  ],
+  "deptId": [
+    "64b757eb3488412631fc81ce",
+    "64b7584e3488412631fc8214"
+  ],
+  "createTime": {
+    "$date": "2023-07-19T03:39:06.386Z"
+  },
+  "lastLoginTime": {
+    "$date": "2023-07-19T03:39:06.386Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b75cfcd2519dbe7b57afb3"
+  },
+  "userId": 1000005,
+  "userName": "Jacob",
+  "userEmail": "jacob@163.com",
+  "password": "21232f297a57a5a743894a0e4a801fc3",
+  "mobile": "17766666666",
+  "job": "Java工程师",
+  "state": 1,
+  "role": 1,
+  "roleList": [
+    "64b75b2ed2519dbe7b57af36"
+  ],
+  "deptId": [
+    "64b757eb3488412631fc81ce",
+    "64b7581d3488412631fc8208"
+  ],
+  "createTime": {
+    "$date": "2023-07-19T03:39:06.386Z"
+  },
+  "lastLoginTime": {
+    "$date": "2023-07-19T03:39:06.386Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b75d1dd2519dbe7b57afb9"
+  },
+  "userId": 1000006,
+  "userName": "Mark",
+  "userEmail": "mark@163.com",
+  "password": "21232f297a57a5a743894a0e4a801fc3",
+  "mobile": "18866666666",
+  "job": "前端工程师",
+  "state": 1,
+  "role": 1,
+  "roleList": [
+    "64b75b37d2519dbe7b57af3a"
+  ],
+  "deptId": [
+    "64b757eb3488412631fc81ce",
+    "64b7581d3488412631fc8208"
+  ],
+  "createTime": {
+    "$date": "2023-07-19T03:39:06.386Z"
+  },
+  "lastLoginTime": {
+    "$date": "2023-07-19T03:39:06.386Z"
+  },
+  "__v": 0
+}]

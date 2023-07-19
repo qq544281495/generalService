@@ -1,0 +1,103 @@
+[{
+  "_id": {
+    "$oid": "64b757eb3488412631fc81ce"
+  },
+  "parentId": [
+    null
+  ],
+  "deptName": "迣岳科技有限公司",
+  "userId": "1000000",
+  "userName": "Olivia",
+  "userEmail": "olivia@163.com",
+  "updateTime": {
+    "$date": "2023-07-19T03:34:02.923Z"
+  },
+  "createTime": {
+    "$date": "2023-07-19T03:18:46.510Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b7581d3488412631fc8208"
+  },
+  "parentId": [
+    {
+      "$oid": "64b757eb3488412631fc81ce"
+    }
+  ],
+  "deptName": "研发部门",
+  "userId": "1000001",
+  "userName": "Liam",
+  "userEmail": "liam@163.com",
+  "updateTime": {
+    "$date": "2023-07-19T03:46:19.451Z"
+  },
+  "createTime": {
+    "$date": "2023-07-19T03:18:46.510Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b758323488412631fc820c"
+  },
+  "parentId": [
+    {
+      "$oid": "64b757eb3488412631fc81ce"
+    }
+  ],
+  "deptName": "电商部门",
+  "userId": "1000002",
+  "userName": "Noah",
+  "userEmail": "noah@163.com",
+  "updateTime": {
+    "$date": "2023-07-19T03:46:25.401Z"
+  },
+  "createTime": {
+    "$date": "2023-07-19T03:18:46.510Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b758413488412631fc8210"
+  },
+  "parentId": [
+    {
+      "$oid": "64b757eb3488412631fc81ce"
+    }
+  ],
+  "deptName": "人事部门",
+  "userId": "1000003",
+  "userName": "James",
+  "userEmail": "james@163.com",
+  "updateTime": {
+    "$date": "2023-07-19T03:46:30.698Z"
+  },
+  "createTime": {
+    "$date": "2023-07-19T03:18:46.510Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b7584e3488412631fc8214"
+  },
+  "parentId": [
+    {
+      "$oid": "64b757eb3488412631fc81ce"
+    }
+  ],
+  "deptName": "行政部门",
+  "userId": "1000004",
+  "userName": "Mason",
+  "userEmail": "mason@163.com",
+  "updateTime": {
+    "$date": "2023-07-19T03:46:33.970Z"
+  },
+  "createTime": {
+    "$date": "2023-07-19T03:18:46.510Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,319 @@
+[{
+  "_id": {
+    "$oid": "64b75451cab48a4ed97a04f7"
+  },
+  "roleName": "Boss",
+  "remark": "Boss",
+  "permissionList": {
+    "checkedKeys": [
+      "64b751a4cab48a4ed97a0437",
+      "64b751b9cab48a4ed97a043b",
+      "64b751c4cab48a4ed97a043f",
+      "64b751d5cab48a4ed97a0443",
+      "64b751e7cab48a4ed97a0447",
+      "64b75262cab48a4ed97a045a",
+      "64b75273cab48a4ed97a045e",
+      "64b75284cab48a4ed97a0462",
+      "64b75292cab48a4ed97a0466",
+      "64b7529ecab48a4ed97a046a",
+      "64b752e7cab48a4ed97a0491",
+      "64b752f4cab48a4ed97a0495",
+      "64b75300cab48a4ed97a0499",
+      "64b7530acab48a4ed97a049d",
+      "64b7535fcab48a4ed97a04b6",
+      "64b75380cab48a4ed97a04ba",
+      "64b7538ecab48a4ed97a04be",
+      "64b75398cab48a4ed97a04c2",
+      "64b75dabd2519dbe7b57afd7",
+      "64b75dc0d2519dbe7b57afdb",
+      "64b75e04d2519dbe7b57afe5",
+      "64b75e11d2519dbe7b57afe9",
+      "64b75e40d2519dbe7b57aff1",
+      "64b75e52d2519dbe7b57aff5"
+    ],
+    "halfCheckedKeys": [
+      "64b75112cab48a4ed97a0427",
+      "64b75189cab48a4ed97a0433",
+      "64b7524ecab48a4ed97a0456",
+      "64b752d4cab48a4ed97a048d",
+      "64b7533bcab48a4ed97a04b2",
+      "64b75d3fd2519dbe7b57afcc",
+      "64b75d8ed2519dbe7b57afd3",
+      "64b75e2cd2519dbe7b57afed"
+    ]
+  },
+  "createTime": {
+    "$date": "2023-07-19T02:50:30.641Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b75b06d2519dbe7b57af1f"
+  },
+  "roleName": "研发主管",
+  "remark": "研发主管",
+  "permissionList": {
+    "checkedKeys": [
+      "64b751a4cab48a4ed97a0437",
+      "64b751b9cab48a4ed97a043b",
+      "64b751c4cab48a4ed97a043f",
+      "64b751d5cab48a4ed97a0443",
+      "64b751e7cab48a4ed97a0447",
+      "64b75262cab48a4ed97a045a",
+      "64b75273cab48a4ed97a045e",
+      "64b75284cab48a4ed97a0462",
+      "64b75292cab48a4ed97a0466",
+      "64b7529ecab48a4ed97a046a",
+      "64b752e7cab48a4ed97a0491",
+      "64b752f4cab48a4ed97a0495",
+      "64b75300cab48a4ed97a0499",
+      "64b7530acab48a4ed97a049d",
+      "64b7535fcab48a4ed97a04b6",
+      "64b75380cab48a4ed97a04ba",
+      "64b7538ecab48a4ed97a04be",
+      "64b75398cab48a4ed97a04c2",
+      "64b75dabd2519dbe7b57afd7",
+      "64b75dc0d2519dbe7b57afdb",
+      "64b75e04d2519dbe7b57afe5",
+      "64b75e11d2519dbe7b57afe9",
+      "64b75e40d2519dbe7b57aff1",
+      "64b75e52d2519dbe7b57aff5"
+    ],
+    "halfCheckedKeys": [
+      "64b75112cab48a4ed97a0427",
+      "64b75189cab48a4ed97a0433",
+      "64b7524ecab48a4ed97a0456",
+      "64b752d4cab48a4ed97a048d",
+      "64b7533bcab48a4ed97a04b2",
+      "64b75d3fd2519dbe7b57afcc",
+      "64b75d8ed2519dbe7b57afd3",
+      "64b75e2cd2519dbe7b57afed"
+    ]
+  },
+  "createTime": {
+    "$date": "2023-07-19T03:39:06.405Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b75b13d2519dbe7b57af2a"
+  },
+  "roleName": "电商主管",
+  "remark": "电商主管",
+  "permissionList": {
+    "checkedKeys": [
+      "64b751a4cab48a4ed97a0437",
+      "64b751b9cab48a4ed97a043b",
+      "64b751c4cab48a4ed97a043f",
+      "64b751d5cab48a4ed97a0443",
+      "64b751e7cab48a4ed97a0447",
+      "64b75262cab48a4ed97a045a",
+      "64b75273cab48a4ed97a045e",
+      "64b75284cab48a4ed97a0462",
+      "64b75292cab48a4ed97a0466",
+      "64b7529ecab48a4ed97a046a",
+      "64b752e7cab48a4ed97a0491",
+      "64b752f4cab48a4ed97a0495",
+      "64b75300cab48a4ed97a0499",
+      "64b7530acab48a4ed97a049d",
+      "64b7535fcab48a4ed97a04b6",
+      "64b75380cab48a4ed97a04ba",
+      "64b7538ecab48a4ed97a04be",
+      "64b75398cab48a4ed97a04c2",
+      "64b75dabd2519dbe7b57afd7",
+      "64b75dc0d2519dbe7b57afdb",
+      "64b75e04d2519dbe7b57afe5",
+      "64b75e11d2519dbe7b57afe9",
+      "64b75e40d2519dbe7b57aff1",
+      "64b75e52d2519dbe7b57aff5"
+    ],
+    "halfCheckedKeys": [
+      "64b75112cab48a4ed97a0427",
+      "64b75189cab48a4ed97a0433",
+      "64b7524ecab48a4ed97a0456",
+      "64b752d4cab48a4ed97a048d",
+      "64b7533bcab48a4ed97a04b2",
+      "64b75d3fd2519dbe7b57afcc",
+      "64b75d8ed2519dbe7b57afd3",
+      "64b75e2cd2519dbe7b57afed"
+    ]
+  },
+  "createTime": {
+    "$date": "2023-07-19T03:39:06.405Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b75b1ad2519dbe7b57af2e"
+  },
+  "roleName": "人事主管",
+  "remark": "人事主管",
+  "permissionList": {
+    "checkedKeys": [
+      "64b751a4cab48a4ed97a0437",
+      "64b751b9cab48a4ed97a043b",
+      "64b751c4cab48a4ed97a043f",
+      "64b751d5cab48a4ed97a0443",
+      "64b751e7cab48a4ed97a0447",
+      "64b75262cab48a4ed97a045a",
+      "64b75273cab48a4ed97a045e",
+      "64b75284cab48a4ed97a0462",
+      "64b75292cab48a4ed97a0466",
+      "64b7529ecab48a4ed97a046a",
+      "64b752e7cab48a4ed97a0491",
+      "64b752f4cab48a4ed97a0495",
+      "64b75300cab48a4ed97a0499",
+      "64b7530acab48a4ed97a049d",
+      "64b7535fcab48a4ed97a04b6",
+      "64b75380cab48a4ed97a04ba",
+      "64b7538ecab48a4ed97a04be",
+      "64b75398cab48a4ed97a04c2",
+      "64b75dabd2519dbe7b57afd7",
+      "64b75dc0d2519dbe7b57afdb",
+      "64b75e04d2519dbe7b57afe5",
+      "64b75e11d2519dbe7b57afe9",
+      "64b75e40d2519dbe7b57aff1",
+      "64b75e52d2519dbe7b57aff5"
+    ],
+    "halfCheckedKeys": [
+      "64b75112cab48a4ed97a0427",
+      "64b75189cab48a4ed97a0433",
+      "64b7524ecab48a4ed97a0456",
+      "64b752d4cab48a4ed97a048d",
+      "64b7533bcab48a4ed97a04b2",
+      "64b75d3fd2519dbe7b57afcc",
+      "64b75d8ed2519dbe7b57afd3",
+      "64b75e2cd2519dbe7b57afed"
+    ]
+  },
+  "createTime": {
+    "$date": "2023-07-19T03:39:06.405Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b75b22d2519dbe7b57af32"
+  },
+  "roleName": "行政主管",
+  "remark": "行政主管",
+  "permissionList": {
+    "checkedKeys": [
+      "64b751a4cab48a4ed97a0437",
+      "64b751b9cab48a4ed97a043b",
+      "64b751c4cab48a4ed97a043f",
+      "64b751d5cab48a4ed97a0443",
+      "64b751e7cab48a4ed97a0447",
+      "64b75262cab48a4ed97a045a",
+      "64b75273cab48a4ed97a045e",
+      "64b75284cab48a4ed97a0462",
+      "64b75292cab48a4ed97a0466",
+      "64b7529ecab48a4ed97a046a",
+      "64b752e7cab48a4ed97a0491",
+      "64b752f4cab48a4ed97a0495",
+      "64b75300cab48a4ed97a0499",
+      "64b7530acab48a4ed97a049d",
+      "64b7535fcab48a4ed97a04b6",
+      "64b75380cab48a4ed97a04ba",
+      "64b7538ecab48a4ed97a04be",
+      "64b75398cab48a4ed97a04c2",
+      "64b75dabd2519dbe7b57afd7",
+      "64b75dc0d2519dbe7b57afdb",
+      "64b75e04d2519dbe7b57afe5",
+      "64b75e11d2519dbe7b57afe9",
+      "64b75e40d2519dbe7b57aff1",
+      "64b75e52d2519dbe7b57aff5"
+    ],
+    "halfCheckedKeys": [
+      "64b75112cab48a4ed97a0427",
+      "64b75189cab48a4ed97a0433",
+      "64b7524ecab48a4ed97a0456",
+      "64b752d4cab48a4ed97a048d",
+      "64b7533bcab48a4ed97a04b2",
+      "64b75d3fd2519dbe7b57afcc",
+      "64b75d8ed2519dbe7b57afd3",
+      "64b75e2cd2519dbe7b57afed"
+    ]
+  },
+  "createTime": {
+    "$date": "2023-07-19T03:39:06.405Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b75b2ed2519dbe7b57af36"
+  },
+  "roleName": "Java工程师",
+  "remark": "Java工程师",
+  "permissionList": {
+    "checkedKeys": [
+      "64b751a4cab48a4ed97a0437",
+      "64b751b9cab48a4ed97a043b",
+      "64b75262cab48a4ed97a045a",
+      "64b75273cab48a4ed97a045e",
+      "64b752e7cab48a4ed97a0491",
+      "64b752f4cab48a4ed97a0495",
+      "64b7535fcab48a4ed97a04b6",
+      "64b75380cab48a4ed97a04ba",
+      "64b7538ecab48a4ed97a04be",
+      "64b75398cab48a4ed97a04c2",
+      "64b75dabd2519dbe7b57afd7",
+      "64b75dc0d2519dbe7b57afdb",
+      "64b75e04d2519dbe7b57afe5"
+    ],
+    "halfCheckedKeys": [
+      "64b7533bcab48a4ed97a04b2",
+      "64b75112cab48a4ed97a0427",
+      "64b75189cab48a4ed97a0433",
+      "64b7524ecab48a4ed97a0456",
+      "64b752d4cab48a4ed97a048d",
+      "64b75d3fd2519dbe7b57afcc",
+      "64b75d8ed2519dbe7b57afd3"
+    ]
+  },
+  "createTime": {
+    "$date": "2023-07-19T03:39:06.405Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b75b37d2519dbe7b57af3a"
+  },
+  "roleName": "前端工程师",
+  "remark": "前端工程师",
+  "permissionList": {
+    "checkedKeys": [
+      "64b751a4cab48a4ed97a0437",
+      "64b751b9cab48a4ed97a043b",
+      "64b75262cab48a4ed97a045a",
+      "64b75273cab48a4ed97a045e",
+      "64b752e7cab48a4ed97a0491",
+      "64b752f4cab48a4ed97a0495",
+      "64b7535fcab48a4ed97a04b6",
+      "64b75380cab48a4ed97a04ba",
+      "64b7538ecab48a4ed97a04be",
+      "64b75398cab48a4ed97a04c2",
+      "64b75dabd2519dbe7b57afd7",
+      "64b75dc0d2519dbe7b57afdb",
+      "64b75e04d2519dbe7b57afe5"
+    ],
+    "halfCheckedKeys": [
+      "64b7533bcab48a4ed97a04b2",
+      "64b75112cab48a4ed97a0427",
+      "64b75189cab48a4ed97a0433",
+      "64b7524ecab48a4ed97a0456",
+      "64b752d4cab48a4ed97a048d",
+      "64b75d3fd2519dbe7b57afcc",
+      "64b75d8ed2519dbe7b57afd3"
+    ]
+  },
+  "createTime": {
+    "$date": "2023-07-19T03:39:06.405Z"
+  },
+  "__v": 0
+}]

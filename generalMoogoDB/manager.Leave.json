@@ -1,0 +1,164 @@
+[{
+  "_id": {
+    "$oid": "64b76226fb0cd5cd13ce9f19"
+  },
+  "orderNo": "XJ202307190",
+  "applyType": 1,
+  "startTime": {
+    "$date": "2023-07-20T01:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2023-07-20T10:00:00.000Z"
+  },
+  "applyUser": {
+    "userId": "1000006",
+    "userName": "Mark",
+    "userEmail": "mark@163.com"
+  },
+  "leaveTime": "1天",
+  "reasons": "休息",
+  "auditUsers": "Liam,James,Olivia",
+  "curAuditUserName": "Olivia",
+  "auditFlows": [
+    {
+      "userId": "1000001",
+      "userName": "Liam",
+      "userEmail": "liam@163.com",
+      "checkState": 1,
+      "_id": {
+        "$oid": "64b76226fb0cd5cd13ce9f1a"
+      }
+    },
+    {
+      "userId": "1000003",
+      "userName": "James",
+      "userEmail": "james@163.com",
+      "checkState": 1,
+      "_id": {
+        "$oid": "64b76226fb0cd5cd13ce9f1b"
+      }
+    },
+    {
+      "userId": "1000000",
+      "userName": "Olivia",
+      "userEmail": "olivia@163.com",
+      "checkState": 1,
+      "_id": {
+        "$oid": "64b76226fb0cd5cd13ce9f1c"
+      }
+    }
+  ],
+  "auditLogs": [
+    {
+      "userId": "1000001",
+      "userName": "Liam",
+      "createTime": {
+        "$date": "2023-07-19T04:19:36.012Z"
+      },
+      "remark": "通过",
+      "action": "succeed",
+      "_id": {
+        "$oid": "64b76458fb0cd5cd13cea0ab"
+      }
+    },
+    {
+      "userId": "1000003",
+      "userName": "James",
+      "createTime": {
+        "$date": "2023-07-19T04:23:48.420Z"
+      },
+      "remark": "通过",
+      "action": "succeed",
+      "_id": {
+        "$oid": "64b76554fb0cd5cd13cea15e"
+      }
+    },
+    {
+      "userId": "1000000",
+      "userName": "Olivia",
+      "createTime": {
+        "$date": "2023-07-19T04:24:53.804Z"
+      },
+      "remark": "通过",
+      "action": "succeed",
+      "_id": {
+        "$oid": "64b76595fb0cd5cd13cea189"
+      }
+    }
+  ],
+  "applyState": 4,
+  "createTime": {
+    "$date": "2023-07-19T04:09:57.307Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b766c1fb0cd5cd13cea212"
+  },
+  "orderNo": "XJ202307191",
+  "applyType": 2,
+  "startTime": {
+    "$date": "2023-07-24T01:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2023-07-28T10:00:00.000Z"
+  },
+  "applyUser": {
+    "userId": "1000006",
+    "userName": "Mark",
+    "userEmail": "mark@163.com"
+  },
+  "leaveTime": "5天",
+  "reasons": "回家",
+  "auditUsers": "Liam,James,Olivia",
+  "curAuditUserName": "James",
+  "auditFlows": [
+    {
+      "userId": "1000001",
+      "userName": "Liam",
+      "userEmail": "liam@163.com",
+      "checkState": 1,
+      "_id": {
+        "$oid": "64b766c1fb0cd5cd13cea213"
+      }
+    },
+    {
+      "userId": "1000003",
+      "userName": "James",
+      "userEmail": "james@163.com",
+      "checkState": 0,
+      "_id": {
+        "$oid": "64b766c1fb0cd5cd13cea214"
+      }
+    },
+    {
+      "userId": "1000000",
+      "userName": "Olivia",
+      "userEmail": "olivia@163.com",
+      "checkState": 0,
+      "_id": {
+        "$oid": "64b766c1fb0cd5cd13cea215"
+      }
+    }
+  ],
+  "auditLogs": [
+    {
+      "userId": "1000001",
+      "userName": "Liam",
+      "createTime": {
+        "$date": "2023-07-19T04:30:19.097Z"
+      },
+      "remark": "通过",
+      "action": "succeed",
+      "_id": {
+        "$oid": "64b766dbfb0cd5cd13cea237"
+      }
+    }
+  ],
+  "applyState": 2,
+  "createTime": {
+    "$date": "2023-07-19T04:09:57.307Z"
+  },
+  "__v": 0
+}]
