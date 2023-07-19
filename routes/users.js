@@ -11,10 +11,10 @@ router.prefix("/users");
 // 登录
 router.post("/login", async (ctx) => {
   try {
-    const { userName, password } = ctx.request.body;
+    const { userEmail, password } = ctx.request.body;
     let md5Password = md5(password);
     const res = await User.findOne(
-      { userName, password: md5Password },
+      { userEmail, password: md5Password },
       { _id: 0, password: 0 }
     );
     if (res) {

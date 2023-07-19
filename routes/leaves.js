@@ -59,7 +59,7 @@ router.post("/operate", async (ctx) => {
       let personnelUser = await Dept.find({ deptName: "人事部门" });
       users.push(personnelUser[0]);
       // 获取公司负责人
-      let bossUser = await Dept.find({ deptName: "珠海识卓科技有限公司" });
+      let bossUser = await Dept.find({ deptName: "迣岳科技有限公司" });
       users.push(bossUser[0]);
       // 创建审批流 & 审批人员
       params.auditFlows = [];
